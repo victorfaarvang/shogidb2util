@@ -57,7 +57,7 @@ class FormatProcessor():
 
     def construct(self, format_builder):
         format_builder.buildHeader(self.game_json)
-        move_number = 2
+        move_number = 1
         for move in self.game_json["moves"]:
             format_builder.buildMove(move, move_number)
             move_number += 1
