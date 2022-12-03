@@ -105,27 +105,3 @@ if len(errors) > 0:
     print("Errors:")
     for error in errors:
         print(f"    {error}")
-
-
-
-def convertJsonToKIF(game_as_json):
-    kifu_file = ""
-    kifu_file += f"開始日時：{game_as_json['開始日時']}\n"
-    kifu_file += f"終了日時：{game_as_json['終了日時']}\n"
-    kifu_file += f"棋戦：{game_as_json['棋戦']}\n"
-    kifu_file += f"棋戦詳細：{game_as_json['棋戦詳細']}\n"
-    kifu_file += f"持ち時間：{game_as_json['time']}\n"
-    kifu_file += f"手合割：{game_as_json['手合割']}\n"
-    kifu_file += f"先手：{game_as_json['先手']}\n"
-    kifu_file += f"後手：{game_as_json['後手']}\n"
-    kifu_file += f"場所：{game_as_json['場所']}\n"
-    kifu_file += f"result：{game_as_json['result']}\n"
-    kifu_file += f"place：{game_as_json['place']}\n"
-    kifu_file += f"strategy：{game_as_json['strategy']}\n"
-    kifu_file += f"time_consumed：{game_as_json['time_consumed']}\n"
-    kifu_file += f"手数----指手---------消費時間--\n"
-    moves = game_as_json["moves"]
-    for i in range(len(moves)):
-        kifu_file += f"{i + 1:>4}   {moves[i]['move']:<}\n"
-    return kifu_file
-
